@@ -17,6 +17,8 @@
     width: 300px;
     height: 350px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    /* white-space: wrap; */
+    /* overflow: hidden; */
     /* border: 2px solid rgb(138, 10, 202); */
     /* border-radius: 15px; */
 }

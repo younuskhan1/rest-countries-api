@@ -47,7 +47,7 @@ const loadCountriesDetails = async (code) => {
   try {
     const res = await fetch(url);
     const data = await res.json();
-    displayCountriesDetails(data);
+    displayCountriesDetails(data[0]);
   }
   catch (error) {
     console.log(error);
@@ -55,8 +55,14 @@ const loadCountriesDetails = async (code) => {
 }
 
 const displayCountriesDetails = (data) => {
-
-  console.log(data);
+  // console.log(data);
+  const showDetailsContainer = document.getElementById("showDetailsContainer");
+  showDetailsContainer.innerHTML = `
+  <img class="card-image" src="${data.flags.png}" />
+  
+  `;
+  ShowModalDetails.showModal();
+  // console.log(data);
 }
 
 

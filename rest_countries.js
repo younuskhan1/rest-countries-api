@@ -55,11 +55,11 @@ const loadCountriesDetails = async (code) => {
 }
 
 const displayCountriesDetails = (data) => {
-  // console.log(data);
+  console.log(data);
   const showDetailsContainer = document.getElementById("showDetailsContainer");
   showDetailsContainer.innerHTML = `
   <img class="card-image" src="${data.flags.png}" />
-  
+  <h2 class="country-name">${data.name.official}</h2>
   `;
   ShowModalDetails.showModal();
   // console.log(data);
